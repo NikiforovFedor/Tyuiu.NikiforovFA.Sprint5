@@ -24,12 +24,14 @@ namespace Tyuiu.NikiforovFA.Sprint5.Task1.V2
             Console.WriteLine("* Результат:                                                              *");
             string[] r = File.ReadAllLines(res);
             int k = -6;
+            Console.WriteLine("---------------");
             foreach (string s in r)
             {
 
-                  Console.WriteLine("* {0, -7} {1, -7}", s, k++ + " *");
+                  Console.WriteLine("| {0, -6:f2} | {1, 4:d}", s, k++ + " |");
             }
-            
+            Console.WriteLine("---------------");
+
         }
     }
 }
