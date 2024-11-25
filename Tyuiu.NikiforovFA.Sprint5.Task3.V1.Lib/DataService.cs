@@ -6,11 +6,13 @@ namespace Tyuiu.NikiforovFA.Sprint5.Task3.V1.Lib
     {
         public string SaveToFileTextData(int x)
         {
-            string res = ((x * x * x - 8) / (2 * x * x)).ToString();
+            double res = (x * x * x - 8) / (2 * x * x);
+            res = Math.Round(res);
+            string str = res.ToString();
             
             File.Delete("OutPutFileTask3.txt");
             string s = Path.Combine(new string[] { Path.GetTempPath(), "OutPutFileTask3.txt" });
-            File.AppendAllText(s, res);
+            File.AppendAllText(s, str);
             return s;
         }
     }
