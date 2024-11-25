@@ -33,7 +33,7 @@ namespace Tyuiu.NikiforovFA.Sprint5.Task2.V3.Lib
                         str += matrix[i,j];
                     }
                 }
-                if (i != matrix.GetLength(0)- 1)
+                if (i != matrix.GetLength(0) - 1)
                 {
                     File.AppendAllText(s, str + Environment.NewLine);
                 }
