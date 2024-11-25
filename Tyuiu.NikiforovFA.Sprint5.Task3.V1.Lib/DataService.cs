@@ -10,8 +10,8 @@ namespace Tyuiu.NikiforovFA.Sprint5.Task3.V1.Lib
             res = Math.Round(res,3);
             string str = res.ToString();
             
-            File.Delete("OutPutFileTask3.txt");
-            string s = Path.Combine(new string[] { Path.GetTempPath(), "OutPutFileTask3.txt" });
+            File.Delete("OutPutFileTask3.bin");
+            string s = Path.Combine(new string[] { Path.GetTempPath(), "OutPutFileTask3.bin" });
             File.AppendAllText(s, str);
             return s;
         }

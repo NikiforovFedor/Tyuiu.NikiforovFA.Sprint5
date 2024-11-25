@@ -6,7 +6,7 @@ namespace Tyuiu.NikiforovFA.Sprint5.Task3.V1.Test
         [TestMethod]
         public void SaveToFileTextDataValid()
         {
-            string s = @"C:\Users\Fedor\AppData\Local\Temp\OutPutFileTask3.txt";
+            string s = @"C:\Users\Fedor\AppData\Local\Temp\OutPutFileTask3.bin";
             FileInfo fileInfo = new FileInfo(s);
             bool file = fileInfo.Exists;
             Assert.AreEqual(true, file);
