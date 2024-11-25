@@ -6,7 +6,6 @@ namespace Tyuiu.NikiforovFA.Sprint5.Task2.V3.Lib
     {
         public string SaveToFileTextData(int[,] matrix)
         {
-            double res;
             File.Delete("OutPutFileTask2.txt");
             string s = Path.Combine(new string[] { Path.GetTempPath(), "OutPutFileTask2.txt" });
             for (int i = 0; i < matrix.GetLength(0); i++)
