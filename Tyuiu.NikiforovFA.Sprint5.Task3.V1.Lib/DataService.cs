@@ -6,7 +6,7 @@ namespace Tyuiu.NikiforovFA.Sprint5.Task3.V1.Lib
     {
         public string SaveToFileTextData(int x)
         {
-            double res = (x * x * x - 8) / (2 * x * x);
+            double res = ((x * x * x) - 8.0) / (2.0 * x * x);
             res = Math.Round(res,3);
             string str = res.ToString();
             
