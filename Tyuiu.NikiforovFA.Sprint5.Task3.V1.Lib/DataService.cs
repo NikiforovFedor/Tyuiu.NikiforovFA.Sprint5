@@ -7,7 +7,7 @@ namespace Tyuiu.NikiforovFA.Sprint5.Task3.V1.Lib
         public string SaveToFileTextData(int x)
         {
             double res = (x * x * x - 8) / (2 * x * x);
-            res = Math.Round(res);
+            res = Math.Round(res,3);
             string str = res.ToString();
             
             File.Delete("OutPutFileTask3.txt");
