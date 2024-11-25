@@ -24,7 +24,7 @@ namespace Tyuiu.NikiforovFA.Sprint5.Task2.V3.Lib
             {
                 for(int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    if (j != matrix.GetLength(1))
+                    if (j != matrix.GetLength(1)+1)
                     {
                         str += matrix[i, j] + ";" ;
                     }
@@ -33,7 +33,7 @@ namespace Tyuiu.NikiforovFA.Sprint5.Task2.V3.Lib
                         str += matrix[i,j];
                     }
                 }
-                if (i != matrix.GetLength(0))
+                if (i != matrix.GetLength(0)+1)
                 {
                     File.AppendAllText(s, str + Environment.NewLine);
                 }
