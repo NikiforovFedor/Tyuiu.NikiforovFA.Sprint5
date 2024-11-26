@@ -14,7 +14,10 @@ namespace Tyuiu.NikiforovFA.Sprint5.Task5.V8.Lib
             for (int i = 0; i < s.Length; i++)
             {
                 double r = Convert.ToDouble(s[i]);
-                m = Math.Min(m, r);
+                if (r % 1 != 0)
+                {
+                    m = Math.Min(m, r);
+                }
             }
             return m;
         }
