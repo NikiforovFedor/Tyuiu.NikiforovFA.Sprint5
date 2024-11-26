@@ -6,17 +6,17 @@ namespace Tyuiu.NikiforovFA.Sprint5.Task5.V8.Lib
     {
         public double LoadFromDataFile(string path)
         {
-            double res = 1000;
-            using (StreamReader reader = new StreamReader(path))
+
+            string strX = File.ReadAllText(path);
+            strX = strX.Replace(".", ",");
+            String[] s = strX.Split(" ");
+            double m = 1000;
+            for (int i = 0; i < s.Length; i++)
             {
-                string line;
-                while ((line = reader.ReadLine()) != null)
-                {
-                    line = line.Replace(".",",");
-                    res = Math.Min(Convert.ToDouble(line), res);
-                }
+                double r = Convert.ToDouble(s[i]);
+                m = Math.Min(m, r);
             }
-            return res;
+            return m;
         }
     }
 }
