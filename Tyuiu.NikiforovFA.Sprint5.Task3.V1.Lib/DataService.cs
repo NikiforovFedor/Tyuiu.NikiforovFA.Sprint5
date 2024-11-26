@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Text;
 using tyuiu.cources.programming.interfaces;
 using tyuiu.cources.programming.interfaces.Sprint5;
 namespace Tyuiu.NikiforovFA.Sprint5.Task3.V1.Lib
@@ -18,7 +19,7 @@ namespace Tyuiu.NikiforovFA.Sprint5.Task3.V1.Lib
                 File.Delete(path);
             }
 
-            using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.OpenOrCreate)))
+            using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.OpenOrCreate), Encoding.UTF8))
             {
                 writer.Write(BitConverter.GetBytes(res));
             }
