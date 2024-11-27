@@ -25,6 +25,7 @@ namespace Tyuiu.NikiforovFA.Sprint5.Task7.V29.Lib
                         }
                     }
                     string line1 = string.Join(" ",l);
+                    line1 = line1.Replace("  ", " ");
                     File.AppendAllText(s,line1);
                 }
             }
