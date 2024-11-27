@@ -7,33 +7,28 @@ namespace Tyuiu.NikiforovFA.Sprint5.Task7.V29.Lib
     {
         public string LoadDataAndSave(string path)
         {
-            File.Delete("OutPutFileTask5.txt");
             string s = Path.Combine(new string[] { Path.GetTempPath(), "OutPutFileTask7.txt" });
+            File.Delete(s);
             using (StreamReader reader = new StreamReader(path))
             {
-                string line = reader.ReadLine();
-                for (int i = 0; i < line.Length - 2; i++)
+
+                string line;
+                string str = "0123456789";
+                while ((line = reader.ReadLine()) != null)
                 {
-                    string l0 = line[i].ToString();
-                    string l = line[i + 1].ToString();
-                    string l1 = line[i + 2].ToString();
-                    if (i == 0)
+                    string[] l = line.Split(" ");
+                    for (int i = 0; i < l.Length; i++)
                     {
-                        if ((s.Contains(l0)) & !(s.Contains(l)))
+                        if (l[i].Length == 1 & str.Contains(l[i]))
                         {
-                            line = line.Replace(l0, "");
-                            File.WriteAllText(s, line);
+                            l[i] = "";
                         }
                     }
-                    if (!(s.Contains(l0)) & s.Contains(l) & !(s.Contains(l1)))
-                    {
-                        line = line.Replace(l, "");
-                        File.WriteAllText(s, line);
-                    }
+                    string line1 = string.Join(" ",l);
+                    File.AppendAllText(s,line1);
                 }
             }
             return s;
-
         }
     }
 }
